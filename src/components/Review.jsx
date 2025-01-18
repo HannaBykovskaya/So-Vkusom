@@ -41,7 +41,7 @@ const Review = () => {
 				<motion.p
 				variants={itemVariants}
 				className="mb-10 txt-3xl font-light leading-normal
-				tracking-tighter lg:mx-40 lg:mt-10 lg:text-[2.5rem]">
+				tracking-tighter lg:mx-40 lg:mt-10 lg:text-[2.5rem] hyphens-auto italic">
 					{REVIEW.content}
 				</motion.p>
 				<motion.div

@@ -27,7 +27,7 @@ const ItemVariants = {
 
 const Expertise = () => {
 	return (
-		<section id="expertise" className="mt-20 mb-0">
+		<section id="expertise" className="mt-20 mb-0 hyphens-auto">
 			<h2 className="my-8 text-center text-3xl tracking-tighter
 			 lg:text-4xl">
 				Кухни
@@ -41,17 +41,19 @@ const Expertise = () => {
 					<motion.div
 						variants={ItemVariants}
 					 key={index}
-					className="flex items-center border-b-4
+					className="flex flex-col sm:flex-row md:flex-row 
+					gap-4
+					items-center border-b-4
 					border-dotted border-neutral-700/40 py-2">
-						<div className="flex-shrink-0 pr-8 text-2xl">
-							{cusine.number}
-						</div>
-						<div className="w-1/3 flex-shrink-0">
-							<img src={cusine.image} alt={cusine.title}
-								className="h-auto rounded-3xl "
-							/>
-						</div>
-						<div className="pl-8">
+							<div className="flex-shrink-0 text-2xl ">
+								{cusine.number}
+							</div>
+							<div className="w-full flex-shrink-0 sm:w-1/3 md:w-1/3 lg:w-1/3">
+								<img src={cusine.image} alt={cusine.title}
+									className="h-auto rounded-3xl"
+								/>
+							</div>
+						<div className="pl-0">
 							<h3 className="text-2xl uppercase tracking-tighter
 							text-rose-300">
 								{cusine.title}
